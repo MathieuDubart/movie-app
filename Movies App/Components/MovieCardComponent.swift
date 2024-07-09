@@ -20,11 +20,11 @@ struct MovieCardComponent: View {
                 .font(.headline)
                 .foregroundColor(.primary)
             
-            HStack(alignment:.center) {
+            HStack() {
                 DateComponent(date: singleShow.show.premiered)
                 
                 if let rating = singleShow.show.rating {
-                    Spacer()
+                    
                     RatingComponent(rating: rating.average)
                 }
             }
